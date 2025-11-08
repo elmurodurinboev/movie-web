@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="login">
+        <input id="email" type="email" placeholder="Email" required>
+        <input id="password" type="password" placeholder="Parol" required>
+        <button type="submit">Kirish</button>
+    </form>
+
+    <script>
+        const form = document.querySelector("#login");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const email = document.querySelector("#email").value;
+            const password = document.querySelector("#password").value;
+
+            if (email && password.length >= 6) {
+                alert("Xush kelibsiz!");
+            } else {
+                alert("Ma’lumotlar to‘liq emas yoki parol qisqa!");
+            }
+        });
+    </script>
+</body>
+
+</html>
